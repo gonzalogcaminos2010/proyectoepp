@@ -43,6 +43,11 @@
                 </div>
 
                 <div class="form-group">
+                    <label for="stock_actual">Stock Actual</label>
+                    <input type="number" name="stock_actual" id="stock_actual" class="form-control" placeholder="Ingrese el stock actual" readonly>
+                </div>
+
+                <div class="form-group">
                     <label for="proyecto">Proyecto</label>
                     <input type="text" name="proyecto" id="proyecto" class="form-control" placeholder="Ingrese el proyecto relacionado">
                 </div>

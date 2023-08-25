@@ -16,6 +16,8 @@ return new class extends Migration
             $table->string('nombre');
             $table->string('apellido');
             $table->string('posicion');
+            //dni
+            $table->string('dni')->unique();
             $table->timestamps();
         });
     }

@@ -50,15 +50,23 @@ class ProductoController extends Controller
      */
     public function edit(Producto $producto)
     {
-        //
+        return view('productos.edit', compact('producto'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Producto $producto)
+    public function update(Request $request, $id)
     {
-        //
+        $producto = Producto::find($id);
+    
+        if (!$producto) {
+            return redirect()->route('productos.index')->with('error', 'Producto no encontrado');
+        }
+    
+        $producto->update($request->all());
+    
+        return redirect()->route('productos.index')->with('success', 'Producto actualizado exitosamente');
     }
 
     /**
